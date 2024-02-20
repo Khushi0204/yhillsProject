@@ -1,0 +1,79 @@
+Test Case Document: Deck of Cards Simulation
+
+Introduction
+The purpose of this document is to outline the test cases for the Java program simulating a deck of cards. The program includes functionalities like random card drawing, sorting, and optional shuffling.
+
+Test Objectives
+1.	To verify that the deck is initialized with the correct number of cards.
+2.	To ensure that drawing cards from the deck reduces the deck size accordingly.
+3.	To confirm that shuffling the deck results in a change in the order of cards.
+
+Test Environment
+•	Programming Language: Java
+•	Testing Framework: JUnit
+•	IDE: IntelliJ IDEA
+
+Test Cases
+
+Test Case 1: Deck Initialization
+Objective: Verify that the deck is initialized with the correct number of cards.
+Test Steps:
+1.	Create a new deck.
+2.	Get the size of the deck.
+Expected Result: The deck size should be 52.
+
+Test Case 2: Drawing Cards
+Objective: Ensure that drawing cards from the deck reduces the deck size accordingly.
+Test Steps:
+1.	Create a new deck.
+2.	Get the initial size of the deck.
+3.	Draw a specified number of cards from the deck.
+4.	Get the size of the deck after drawing cards.
+Expected Result: The deck size after drawing cards should be equal to the initial size minus the number of cards drawn.
+
+Test Case 3: Shuffling Deck
+Objective: Confirm that shuffling the deck results in a change in the order of cards.
+Test Steps:
+1.	Create two identical decks.
+2.	Shuffle both decks.
+3.	Draw all cards from each deck.
+4.	Compare the order of cards drawn from both decks.
+
+Code:
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class DeckTest {
+
+    @Test
+    void testDeckSize() {
+        Deck deck = new Deck();
+        assertEquals(52, deck.size());
+    }
+
+    @Test
+    void testDrawCards() {
+        Deck deck = new Deck();
+        int initialSize = deck.size();
+        int numCardsToDraw = 5;
+        deck.draw(numCardsToDraw);
+        assertEquals(initialSize - numCardsToDraw, deck.size());
+    }
+
+    @Test
+    void testShuffle() {
+        Deck deck1 = new Deck();
+        Deck deck2 = new Deck();
+        // Shuffle both decks
+        deck1.shuffle();
+        deck2.shuffle();
+        // Ensure that the decks are not in the same order after shuffling
+        assertNotEquals(deck1.draw(52), deck2.draw(52));
+    }
+}
+Expected Result: The order of cards drawn from each deck should not be the same, indicating that the decks were shuffled successfully.
+Conclusion
+The test cases outlined in this document cover the key functionalities of the deck of cards simulation program. By executing these test cases, we can ensure that the program behaves as expected and meets the specified requirements.
+________________________________________
+This document provides a structured approach to testing the Java program and serves as a reference for the testing process. Adjustments can be made based on specific project requirements or additional functionalities implemented.
+
