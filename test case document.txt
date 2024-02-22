@@ -1,7 +1,7 @@
 Test Case Document: Deck of Cards Simulation
 
 Introduction
-The purpose of this document is to outline the test cases for the Java program simulating a deck of cards. The program includes functionalities like random card drawing, sorting, and optional shuffling.
+The purpose of this document is to outline the test cases for the Java program simulating a deck of cards. The program includes functionalities like random card drawing, sorting, and shuffling.
 
 Test Objectives
 1.	To verify that the deck is initialized with the correct number of cards.
@@ -38,6 +38,7 @@ Test Steps:
 2.	Shuffle both decks.
 3.	Draw all cards from each deck.
 4.	Compare the order of cards drawn from both decks.
+Expected Result: The order of cards drawn from each deck should not be the same, indicating that the decks were shuffled successfully.
 
 Code:
 import org.junit.jupiter.api.Test;
@@ -71,7 +72,7 @@ class DeckTest {
         assertNotEquals(deck1.draw(52), deck2.draw(52));
     }
 }
-Expected Result: The order of cards drawn from each deck should not be the same, indicating that the decks were shuffled successfully.
+
 Conclusion
 The test cases outlined in this document cover the key functionalities of the deck of cards simulation program. By executing these test cases, we can ensure that the program behaves as expected and meets the specified requirements.
 ________________________________________

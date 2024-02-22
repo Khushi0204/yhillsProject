@@ -3,7 +3,7 @@ Deck of Cards Simulation Documentation
 
 Introduction
 
-The "Deck of Cards Simulation" is a Java program designed to emulate a standard deck of playing cards. It provides functionalities such as random card drawing, sorting, and optional shuffling. This documentation outlines the features, implementation details, and usage instructions for the program.
+The "Deck of Cards Simulation" is a Java program designed to emulate a standard deck of playing cards. It provides functionalities such as random card drawing, sorting, and shuffling. This documentation outlines the features, implementation details, and usage instructions for the program.
 
 Features
 
@@ -13,7 +13,7 @@ Features
 
 •Card Drawing and Sorting: Initializes an ArrayList to store 20 randomly drawn cards from the deck. Utilizes a custom Comparator class to sort the cards based on color, suit, and value.
 
-•Optional Shuffling: Provides an option to shuffle the deck before drawing cards. Implements shuffling methods such as Fisher-Yates algorithm.
+•Shuffling: Provides an option to shuffle the deck before drawing cards. Implements shuffling methods such as Fisher-Yates algorithm.
 
 •Unit Testing: Includes unit tests using JUnit to ensure the correctness of functionalities such as deck initialization, drawing cards, and shuffling.
 
